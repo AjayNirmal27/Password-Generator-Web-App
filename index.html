@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+</head>
+<body>
+
+    <div class="container">
+        <h2>🔑 Secure Password Generator</h2>
+
+        <div class="password-box">
+            <input type="text" id="passwordDisplay" readonly placeholder="Generated Password">
+        </div>
+
+        <div class="controls">
+            <label>Password Length:</label>
+            <input type="number" id="passwordLength" min="6" max="15" value="12">
+        </div>
+
+        <div class="strength-options">
+            <label><input type="radio" name="strength" value="normal" checked> Normal</label>
+            <label><input type="radio" name="strength" value="medium"> Medium</label>
+            <label><input type="radio" name="strength" value="strong"> Strong</label>
+        </div>
+
+        <div class="user-inputs">
+            <input type="text" id="firstName" placeholder="First Name">
+            <input type="text" id="lastName" placeholder="Last Name">
+            <input type="text" id="birthDate" placeholder="DD-MM-YYYY">
+            <p class="error-message" id="birthDateError" style="display: none; color: red;">⚠️ Select a valid birth date!</p>
+            <input type="number" id="luckyNumber" placeholder="Lucky Number" min="0">
+        </div>
+
+        <button id="generateBtn">Generate Password</button>
+        <button id="copyBtn">📋 Copy</button>
+        <p class="error-message" id="inputError">⚠️ Please fill in all required fields!</p>
+        <p class="error-message" id="luckyNumberError"></p>
+        <p class="message" id="message">✅ Password copied successfully!</p>
+        <p class="error-message" id="errorMessage">⚠️ Please enter a length between 6 and 15.</p>
+
+        
+    </div>
+    
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
